@@ -4,7 +4,13 @@ const btnStart = document.querySelector('[data-start]')
 const btnStop = document.querySelector('[data-stop]')
 const body = document.querySelector("body");
 
-const handleClickStart = () => {
+
+btnStart.addEventListener("click", handleClickStart);
+
+btnStop.addEventListener("click", handleClickStop);
+
+
+function handleClickStart()  {
     timerId = setInterval(() => {
         body.style.backgroundColor = getRandomHexColor();   
       }, 1000);
@@ -13,10 +19,10 @@ const handleClickStart = () => {
       btnStart.setAttribute('disabled', true); 
       if (btnStart.hasAttribute('disabled')) {
         btnStop.removeAttribute('disabled');
-    }
+    };
   };
 
-  const handleClickStop = () => {
+function handleClickStop()  {
     clearInterval(timerId);
     console.log(`Stop`);
     
@@ -25,13 +31,6 @@ const handleClickStart = () => {
         btnStart.removeAttribute('disabled');
     }
   };
-
-
-
-btnStart.addEventListener("click", handleClickStart);
-
-btnStop.addEventListener("click", handleClickStop);
-
 
 
 function getRandomHexColor() {
