@@ -9,6 +9,7 @@ btnStart.addEventListener("click", handleClickStart);
 
 btnStop.addEventListener("click", handleClickStop);
 
+let timerId;
 
 function handleClickStart()  {
     timerId = setInterval(() => {
