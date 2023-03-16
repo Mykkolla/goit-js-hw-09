@@ -16,20 +16,26 @@ function handleClickStart()  {
       }, 1000);
       console.log(`Start`);
       
-      btnStart.setAttribute('disabled', true); 
-      if (btnStart.hasAttribute('disabled')) {
-        btnStop.removeAttribute('disabled');
-    };
+      btnStart.disabled = true;
+      btnStop.disabled = false;
+
+    //   btnStart.setAttribute('disabled', true); 
+    //   if (btnStart.hasAttribute('disabled')) {
+    //     btnStop.removeAttribute('disabled');
+    // };
   };
 
 function handleClickStop()  {
     clearInterval(timerId);
     console.log(`Stop`);
     
-    btnStop.setAttribute('disabled', true);
-    if (btnStop.hasAttribute('disabled')) {
-        btnStart.removeAttribute('disabled');
-    }
+    btnStart.disabled = false;
+    btnStop.disabled = true;
+
+    // btnStop.setAttribute('disabled', true);
+    // if (btnStop.hasAttribute('disabled')) {
+    //     btnStart.removeAttribute('disabled');
+    // }
   };
 
 
