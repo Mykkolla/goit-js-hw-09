@@ -55,6 +55,10 @@ const handleClickStart = () => {
         if (distance < 0) {
             clearInterval(timer);
             console.log("Обратный отсчет закончился!");
+            dayMain.textContent =`0`;
+    hoursMain.textContent =`0`;
+    minutesMain.textContent =`0`;
+    secondsMain.textContent =`0`;
         }
     
     }, 1000); 
