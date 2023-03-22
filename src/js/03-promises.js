@@ -56,7 +56,8 @@ function createPromise(position, delay) {
   });
 }
 
-const form = querySelector('.form');
+const form = document.querySelector('.form');
+
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   const delay = parseInt(document.querySelector("input[name='delay']").value);
